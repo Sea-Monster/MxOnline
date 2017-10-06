@@ -17,6 +17,7 @@ import sys
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # 把一些路径也添加到classpath，以防一些模块找不到
 # sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
+sys.path.insert(0, os.path.join(BASE_DIR, 'extra_apps'))
 
 
 # Quick-start development settings - unsuitable for production
@@ -43,7 +44,10 @@ INSTALLED_APPS = [
     'apps.users',
     'apps.courses',
     'apps.organization',
-    'apps.operation'
+    'apps.operation',
+    # 'extra_apps.xadmin',
+    'xadmin',
+    'crispy_forms'
 ]
 AUTH_USER_MODEL = 'users.UserProfile'
 
